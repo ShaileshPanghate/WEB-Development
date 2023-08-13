@@ -1,0 +1,79 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.mainBox{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3,1fr);
+  /* border: 2px solid black; */
+  margin: 2px;
+  padding: 10px;
+}
+.boxdiv{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+h1{
+  font-size: 50px;
+  font-weight: 800;
+  -webkit-text-stroke: 4px #000;
+  color: transparent;
+ 
+  
+}
+#button{
+  margin-left: 900px;
+  margin-top: 40px;
+}
+#button1{
+  margin-left: 900px;
+  margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+  .mainBox{
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(1,1fr);
+    /* border: 2px solid black; */
+    margin: 5px;
+    padding: 10px;
+  }
+  #button{
+    margin-left: 120%;
+    margin-right: 5%;
+    margin-top: 40px;
+  }
+  #button1{
+    margin-left: 10%;
+    margin-right: 5%;
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+ 
+  .mainBox{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2,1fr);
+    /* border: 2px solid black; */
+    margin: 5px;
+    padding: 10px;
+  }
+  #button{
+    margin-left: 750%;
+    margin-right: 5%;
+    margin-top: 40px;
+  }
+  #button1{
+    margin-left: 280%;
+    margin-right: 5%;
+    margin-top: 40px;
+    
+  }
+}
