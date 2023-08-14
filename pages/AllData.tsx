@@ -1,4 +1,4 @@
-
+import Image from 'next/image'
 
 interface eletype{
     id:number;
@@ -33,7 +33,9 @@ interface eletype{
 
         <div  > 
            <div className="boxdiv" style={{display:"flex",  gap:"10px" , padding:"10px" , height:"350px", }} >
-                <img src={ele.image} alt="" width="120px" height="150px" style={{marginTop:"10px"}} />
+                <img src={ele.image} alt="image" width="120px" height="150px" style={{marginTop:"10px"}} />
+                
+                {/* <Image src="${ele.image}" width={120} height={150} alt="Picture of the author" /> */}
                 <div>                    
                     <div className=""><h3 className="font-semibold">{ele.title}</h3></div>
                     <br />

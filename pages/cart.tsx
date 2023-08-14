@@ -1,5 +1,6 @@
+
 import Link from 'next/link';
-import Image from 'next/image';;
+import Image from 'next/image';
 
 interface eletype{
     id:number;
@@ -15,14 +16,13 @@ function cart(){
 
     let productArray :any= [];
    
-        if(localStorage.getItem("CartPro") !== null)
-        {
-        
-            productArray =(localStorage.getItem("CartPro"));
-            productArray = JSON.parse(productArray);
-        }      
-       
-     
+    productArray =(localStorage.getItem("CartPro"));
+    productArray = JSON.parse(productArray);
+            
+       let sum: number = 0;
+     productArray.map((ele)=>{
+        sum += ele.price
+     })
 
     return(
         <div>
@@ -31,7 +31,10 @@ function cart(){
                 <h1 style={{ margin:"30px"}}>cart page</h1>
                 <Link href="/"><button id='button1'  style={{fontSize:"30px" }}>Product page</button> </Link>
             </div>
-            
+            <h2 style={{marginLeft:"30px"}}>
+
+            Total : - {sum};
+            </h2>
              <div style={{  gap:"10px"}}>
 
                 {
